@@ -50,7 +50,7 @@ class Caltech(VisionDataset):
                 
                 self.samples.append(sample)
         
-    def stratified_subsets(self, percentage):
+    def __stratified_subsets__(self, percentage):
         
         if not (0 <= percentage <= 1):
             raise ValueError()
