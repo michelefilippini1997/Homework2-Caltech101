@@ -52,9 +52,9 @@ class Caltech(VisionDataset):
         
     def __stratified_subsets__(self, percentage):
             
-        first_split = []
-        second_split = []
-        
+        first_split = [1,2,3]
+        second_split = [1,2,4]
+        '''
         index_by_class = {}
         
         for i in range(len(self.samples)):
@@ -76,6 +76,7 @@ class Caltech(VisionDataset):
                     first_split.append(c_indexes[i])
                 else:
                     second_split.append(c_indexes[i])
+        '''
         
         return first_split, second_split
         
