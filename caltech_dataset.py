@@ -80,6 +80,8 @@ class Caltech(VisionDataset):
                 else:
                     second_split.append(class_indexes[i])
         
+        return first_split, second_split
+        
     def __getitem__(self, index):
         '''
         __getitem__ should access an element through its index
