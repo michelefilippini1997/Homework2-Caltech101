@@ -32,13 +32,12 @@ class Caltech(VisionDataset):
         
         self.samples = []
         self.class_indexes = {}
+       
+        #file_name = root.split('/')[0] + '/' + self.split + ".txt"
         
-        '''
-        file_name = root.split('/')[0] + '/' + self.split + ".txt"
-        
-        file = open(file_name, "r")
-        lines = file.readlines()
-        '''
+        #file = open(file_name, "r")
+        #lines = file.readlines()
+       
         dir_root = "/".join(root.split('/')[:-1])
         file = open(f"{dir_root}/{split}.txt", 'r')
 
