@@ -51,9 +51,6 @@ class Caltech(VisionDataset):
                 self.samples.append(sample)
         
     def __stratified_subsets__(self, percentage):
-        
-        if not (0 <= percentage <= 1):
-            raise ValueError()
             
         first_split = []
         second_split = []
@@ -70,15 +67,15 @@ class Caltech(VisionDataset):
             index_by_class[class_index].append(sample_index)
             
         for key in index_by_class:
-            class_indexes = index_by_class[key]
+            c_indexes = index_by_class[key]
             
-            n_first_split = ceil(len(class_indexes) * percentage)
+            n_first_split = ceil(len(c_indexes) * percentage)
             
-            for i in range(len(class_indexes)):
+            for i in range(len(c_indexes)):
                 if i < n_first_split:
-                    first_split.append(class_indexes[i])
+                    first_split.append(c_indexes[i])
                 else:
-                    second_split.append(class_indexes[i])
+                    second_split.append(c_indexes[i])
         
         return first_split, second_split
         
