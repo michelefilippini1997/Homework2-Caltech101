@@ -37,8 +37,8 @@ class Caltech(VisionDataset):
         file_name = open(f"{file_root}/{split}.txt", 'r')
         
         file = open(file_name, "r")
-        lines = file.readlines()
-        
+        lines = file.read().readlines()
+
         class_count = 0
         
         for line in lines:
