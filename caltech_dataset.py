@@ -39,7 +39,7 @@ class Caltech(VisionDataset):
         class_count = 0
         
         for line in file.read().splitlines():
-            if not line.startsWith("BACKGROUND_Google"):
+            if not line.startswith("BACKGROUND_Google"):
                 class_name, image_path = line.split("/")[0], line
             
                 if class_name not in self.class_indexes:
