@@ -33,7 +33,7 @@ class Caltech(VisionDataset):
         self.samples = []
         self.class_indexes = {}
         
-        file_root = "/".join(root.split('/')[:-1])
+        file_root = join(root.split('/')[:-1])
         file_name = open(f"{file_root}/{split}.txt", 'r')
         
         file = open(file_name, "r")
